@@ -13,13 +13,13 @@ angular.module('myApp.view1', ['ngRoute'])
   $scope.content = '',
   $http({
     url: 'https://ssdev.superagent.ru/TestApp/swagger/#/Values/GetWithParent',
-    method: "POST",
+    method: "GET",
     withCredentials: true,
     headers: {
       'Content-Type': 'application/json; charset=utf-8'
     }
-    }),
-  $http.get('https://ssdev.superagent.ru/TestApp/swagger/#/Values/GetWithParent')
+    })
+  // $http.get('https://ssdev.superagent.ru/TestApp/swagger/#/Values/GetWithParent')
   .then(function(response) {
     $scope.content = response.data;
     console.log($scope.response)
