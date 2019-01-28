@@ -1,4 +1,7 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
     <p>{{content}}</p>
-    <p>{{1+2}}</p>
+    <ul><li ng-repeat="name in obj">
+        <p>{{name.things}}</p>
+    </li></ul>
+
 </div>
