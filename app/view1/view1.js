@@ -6,7 +6,6 @@ angular.module('myApp.view1', ['ngRoute'])
   $routeProvider.when('/view1', {
     templateUrl: 'view1/view1.html',
     controller: 'myCtrl',
-    controller: 'checkBox',
   });
 }])
 
@@ -41,7 +40,18 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('checkBox', ['$scope', function($scope) {
   $scope.checkboxModel = {
-  value: true  
-};
-}]);
+  value: true};
+}])
 
+.controller('bucketCtrl', function($scope) {
+  for (let item in this.selected) {
+    this.goodsInCart.push(this.selected[item])
+    for (let i in this.sortedGoods) {
+      if (this.sortedGoods[i].id === this.selected[item].id) {
+        this.sortedGoods.splice(i, 1)
+      }
+    }
+  }
+$scope.selected = []
+console.log($scope.selected)
+});

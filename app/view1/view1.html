@@ -1,14 +1,14 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
     <p>{{content}}</p>
-    <md-list ng-controller="checkBox" ng-cloak="" class="listdemoListControls">
+    <md-list ng-controller="checkBox" ng-cloak="" class="listCsontrols">
         <!-- <md-list-item>
             <th></th>
             <th>Категория</th>
             <th>Товар</th>
             <th>Цена</th>
         </tr> -->
-        <md-list-item ng-repeat="name in things" class="listdemoListControls">
-            <md-checkbox ng-model="checkboxModel.value" class="md-secondary"></md-checkbox>
+        <md-list-item ng-repeat="name in things" class="listControls">
+            <md-checkbox ng-model="myCtrl" class="md-secondary">{{name.checked}}</md-checkbox>
             <div class="md-list-item-text">
                 <p>{{name.group}}</p>
                 <p>{{name.name}}</p>
@@ -16,5 +16,11 @@
             </div>
         </md-list-item>
     </md-list>
+    <div ng-controller="bucketCtrl" ng-cloak="" class="buttonUsage" ng-app="MyApp">
+        <md-content>
+          <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-raised">В корзину</md-button>
+      </md-content>
+      </div>
 
 </div>

@@ -1,6 +1,4 @@
 /* app css stylesheet */
-@import "~@angular/material/prebuilt-themes/indigo-pink.css";
-
 .menu {
   list-style: none;
   border-bottom: 0.1em solid black;
@@ -25,17 +23,17 @@
   padding-right: 0.3em;
 }
 
-.listdemoListControls md-divider {
+.listControls md-divider {
   margin-top: 0;
   margin-bottom: 0; }
 
-.listdemoListControls md-list {
+.listControls md-list {
   padding-top: 0; }
 
-.listdemoListControls md-list-item > p,
-.listdemoListControls md-list-item > .md-list-item-inner > p,
-.listdemoListControls md-list-item .md-list-item-inner > p,
-.listdemoListControls md-list-item .md-list-item-inner > .md-list-item-inner > p {
+.listControls md-list-item > p,
+.listControls md-list-item > .md-list-item-inner > p,
+.listControls md-list-item .md-list-item-inner > p,
+.listControls md-list-item .md-list-item-inner > .md-list-item-inner > p {
   -webkit-user-select: none;
   /* Chrome all / Safari all */
   -moz-user-select: none;
@@ -44,11 +42,9 @@
   /* IE 10+ */
   user-select: none;
   /* Likely future */ }
-
-  /* .listdemoListControls md-list-item {
-    background-color: rebeccapurple;
-  }
-
-  .myClass {
-    background-color: rebeccapurple;
-  } */
+  .buttonUsage section {
+    border-radius: 3px;
+    text-align: center;
+    margin: 1em;
+    position: relative !important; }
+  
