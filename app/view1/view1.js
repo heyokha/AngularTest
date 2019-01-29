@@ -27,12 +27,11 @@ angular.module('myApp.view1', ['ngRoute'])
       let obj = response.data[i].skus
       for (let item in obj) {
         obj[item].group = response.data[i].group.name
-        console.log(obj[item].group)
+        console.log(obj[item].group);
       }
-      $scope.things = obj;
+      $scope.things.push(obj);
       console.log($scope.things);
     }
-    console.log(response)
   }, function(response){
     $scope.content = "Something went wrong";
   });
@@ -44,14 +43,17 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('bucketCtrl', function($scope) {
-  for (let item in this.selected) {
-    this.goodsInCart.push(this.selected[item])
-    for (let i in this.sortedGoods) {
-      if (this.sortedGoods[i].id === this.selected[item].id) {
-        this.sortedGoods.splice(i, 1)
+  console.log('test')
+  $scope.selected = [];
+  $scope.inBucket = function () {
+    for (let item in $scope.selected) {
+      $scope.goodsInCart.push($scope.selected[item])
+      for (let i in $scope.sortedGoods) {
+        if ($scope.sortedGoods[i].id === $scope.selected[item].id) {
+            $scope.sortedGoods.splice(i, 1)
+        }
       }
     }
-  }
-$scope.selected = []
-console.log($scope.selected)
+  console.log($scope.selected)};
 });
+

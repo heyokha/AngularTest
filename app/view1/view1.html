@@ -1,5 +1,5 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
-    <p>{{content}}</p>
+    <p>{{things}}</p>
     <md-list ng-controller="checkBox" ng-cloak="" class="listCsontrols">
         <!-- <md-list-item>
             <th></th>
@@ -19,8 +19,8 @@
     <div ng-controller="bucketCtrl" ng-cloak="" class="buttonUsage" ng-app="MyApp">
         <md-content>
           <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-            <md-button class="md-raised">В корзину</md-button>
-      </md-content>
-      </div>
+            <md-button class="md-raised" ng-click="inBucket">В корзину</md-button>
+        </md-content>
+    </div>
 
 </div>
