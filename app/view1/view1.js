@@ -5,13 +5,14 @@ angular.module('myApp.view1', ['ngRoute'])
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
     templateUrl: 'view1/view1.html',
-    controller: 'myCtrl'
+    controller: 'myCtrl',
+    controller: 'checkBox',
   });
 }])
 
 .controller('myCtrl', ['$http', '$scope', function($http, $scope) {
   $scope.content = '';
-  let things = [];
+  $scope.things = [];
   $http({
     url: 'https://ssdev.superagent.ru/TestApp/Values/GetWithParent',
     method: "GET",
@@ -29,11 +30,8 @@ angular.module('myApp.view1', ['ngRoute'])
         obj[item].group = response.data[i].group.name
         console.log(obj[item].group)
       }
-      for (let arr in obj){
-        things.push(obj[arr])
-      }
-      return things
-      console.log(things)
+      $scope.things = obj;
+      console.log($scope.things);
     }
     console.log(response)
   }, function(response){
@@ -41,3 +39,8 @@ angular.module('myApp.view1', ['ngRoute'])
   });
 }]);
 
+.controller('checkBox', ['$scope', function($scope) {
+  $scope.checkboxModel = {
+   value: true
+ };
+}]);

@@ -1,7 +1,20 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
     <p>{{content}}</p>
-    <ul><li ng-repeat="name in obj">
-        <p>{{name.things}}</p>
-    </li></ul>
-
+    <table align="center" width="80%" cellspacing="0" cellpadding="4">
+        <tr>
+            <th></th>
+            <th>Категория</th>
+            <th>Товар</th>
+            <th>Цена</th>
+        </tr>
+        <tr ng-repeat="name in things">
+            <td><form ng-controller="checkBox">
+                    <input type="checkbox" ng-model="checkboxModel.value">
+            </form></td>
+            <td>{{name.group}}</td>
+            <td>{{name.name}}</td>
+            <td>{{name.price}}</td>
+        </tr>
+    </table>
+    <script src="./checkBox.js"></script>
 </div>
