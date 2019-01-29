@@ -1,20 +1,21 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
     <p>{{content}}</p>
-    <table align="center" width="80%" cellspacing="0" cellpadding="4">
-        <tr>
+    <md-list class="listdemoListControls">
+        <!-- <md-list-item>
             <th></th>
             <th>Категория</th>
             <th>Товар</th>
             <th>Цена</th>
-        </tr>
-        <tr ng-repeat="name in things">
-            <td><form ng-controller="checkBox">
-                    <input type="checkbox" ng-model="checkboxModel.value">
-            </form></td>
-            <td>{{name.group}}</td>
-            <td>{{name.name}}</td>
-            <td>{{name.price}}</td>
-        </tr>
-    </table>
-    <script src="./checkBox.js"></script>
+        </tr> -->
+        <md-list-item ng-repeat="name in things" class="listdemoListControls">
+            <div><md-checkbox ng-model="checkboxModel.value" class="listdemoListControls">
+            </md-checkbox></div>
+            <div class="md-list-item-text">
+                <p>{{name.group}}</p>
+                <p>{{name.name}}</p>
+                <p>{{name.price}}</p>
+            </div>
+        </md-list-item>
+    </md-list>
+
 </div>

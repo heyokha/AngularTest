@@ -37,10 +37,11 @@ angular.module('myApp.view1', ['ngRoute'])
   }, function(response){
     $scope.content = "Something went wrong";
   });
-}]);
+}])
 
 .controller('checkBox', ['$scope', function($scope) {
   $scope.checkboxModel = {
-   value: true
- };
+  value: true  
+};
 }]);
+
