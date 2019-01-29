@@ -1,6 +1,6 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
     <p>{{content}}</p>
-    <md-list class="listdemoListControls">
+    <md-list ng-controller="checkBox" ng-cloak="" class="listdemoListControls">
         <!-- <md-list-item>
             <th></th>
             <th>Категория</th>
@@ -8,8 +8,7 @@
             <th>Цена</th>
         </tr> -->
         <md-list-item ng-repeat="name in things" class="listdemoListControls">
-            <div><md-checkbox ng-model="checkboxModel.value" class="listdemoListControls">
-            </md-checkbox></div>
+            <md-checkbox ng-model="checkboxModel.value" class="md-secondary"></md-checkbox>
             <div class="md-list-item-text">
                 <p>{{name.group}}</p>
                 <p>{{name.name}}</p>

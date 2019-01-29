@@ -1,4 +1,5 @@
 /* app css stylesheet */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
 .menu {
   list-style: none;
@@ -43,3 +44,11 @@
   /* IE 10+ */
   user-select: none;
   /* Likely future */ }
+
+  /* .listdemoListControls md-list-item {
+    background-color: rebeccapurple;
+  }
+
+  .myClass {
+    background-color: rebeccapurple;
+  } */
