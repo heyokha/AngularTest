@@ -1,26 +1,18 @@
 <div ng-app="myApp.view1" ng-controller="myCtrl">
-    <p>{{things}}</p>
-    <md-list ng-controller="checkBox" ng-cloak="" class="listCsontrols">
-        <!-- <md-list-item>
-            <th></th>
-            <th>Категория</th>
-            <th>Товар</th>
-            <th>Цена</th>
-        </tr> -->
+    <!-- <p>{{things}}</p> -->
+    <md-list ng-cloak="" class="listControls">
         <md-list-item ng-repeat="name in things" class="listControls">
-            <md-checkbox ng-model="myCtrl" class="md-secondary">{{name.checked}}</md-checkbox>
+            <md-checkbox ng-model="name.checked" class="md-secondary"></md-checkbox>
             <div class="md-list-item-text">
-                <p>{{name.group}}</p>
-                <p>{{name.name}}</p>
-                <p>{{name.price}}</p>
+                <span>{{name.group}}</span>
+                <span>{{name.name}}</span>
+                <span>{{name.price}}</span>
             </div>
         </md-list-item>
     </md-list>
-    <div ng-controller="bucketCtrl" ng-cloak="" class="buttonUsage" ng-app="MyApp">
-        <md-content>
-          <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
-            <md-button class="md-raised" ng-click="inBucket">В корзину</md-button>
-        </md-content>
-    </div>
-
+    <md-content>
+        <section layout="row" layout-sm="column" layout-align="center center" layout-wrap="">
+            <md-button class="md-raised" ng-click="inBuckettest">В корзину</md-button>
+        </section>
+    </md-content>
 </div>
