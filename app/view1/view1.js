@@ -11,7 +11,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 .controller('myCtrl', ['$http', '$scope', function($http, $scope) {
   $scope.content = '';
-  $scope.things = [1,2,3];
+  $scope.things = [];
   $scope.sortedGoods = [];
   console.log($scope.selected)
 
